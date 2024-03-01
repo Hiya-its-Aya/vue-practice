@@ -18,10 +18,13 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useCounterStore } from '../../stores/counter';
 
 defineProps({
   msg: String,
 })
+
+let counterStore = useCounterStore();
 
 let count = ref(0)
 
